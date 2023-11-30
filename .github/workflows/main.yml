@@ -18,7 +18,7 @@ jobs:
       - name : Npm install
         run : npm install
       - name: Setup vue-cli environement
-        uses: npm install -g @vue/cli@latest
+        uses: npm install @vue/cli@latest
       - name : Npm build developement
         run: vue-cli-service build --mode prod
 
