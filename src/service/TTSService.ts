@@ -1,7 +1,6 @@
 import axios from "axios";
 
-const API_KEY = "2abbc91987mshf3a7210e3ca5befp1fe459jsndf2317fcbf98";
-
+const API_KEY = process.env.VUE_APP_RAPID_API_KEY;
 export default {
   async scrape(text: string) {
     const options = {
