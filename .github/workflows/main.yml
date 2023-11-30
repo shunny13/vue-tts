@@ -16,9 +16,9 @@ jobs:
         with :
           node-version: 'lts/*'
       - name : Npm install
-        run : npm install
-      - name: Setup vue-cli environement
-        run: npm install @vue/cli@latest
+        run : |
+          npm i -g @vue/cli
+          rm -rf node_modules package-lock.json && npm install
       - name : Npm build developement
         run: vue-cli-service build --mode prod
 
